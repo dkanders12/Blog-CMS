@@ -15,8 +15,13 @@ const Navbar = () => {
       </div>
       <div id="Links">
         <li>
-          <NavLink className="fix" to="/">
+          <NavLink className="fix" to="/Home">
             Hjem
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="fix" to="/Post">
+            Post
           </NavLink>
         </li>
       </div>

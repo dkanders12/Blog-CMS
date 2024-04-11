@@ -1,9 +1,7 @@
-// FirstPage.jsx
-
 import React from "react";
 import { useGetQuery } from "../../Components/Fetching/Fetching";
 import { getAllBlogs } from "../../Components/Get/Get";
-
+import { NavLink } from "react-router-dom";
 import "./FirstPage.scss";
 
 const FirstPage = () => {
@@ -19,18 +17,17 @@ const FirstPage = () => {
 
   return (
     <section className="main">
-      <h1>Blog Posts</h1>
-      <div id="grid">
-        {data.blogs.map((blog) => (
-          <article id="Container" key={blog.id}>
-            <div className="sideLeft">
-              <h2>{blog.name}</h2>
-              <img src={blog.img.url} alt={blog.img.fileName} />
+      <h1>Gallery Posts</h1>
+      <div id="grid" className="grid-container">
+        {data.galleries.map((gallery, index) => (
+          <article id="Container" key={gallery.id} className="grid-item">
+            <div>
+              <h2>{gallery.title}</h2>
+              <p>{gallery.underRubrik}</p>
+              <p>{new Date(gallery.time).toLocaleString()}</p>
+              <NavLink to={`/gallery/${gallery.id}`}>{gallery.laes}</NavLink>
             </div>
-            <div className="sideRight">
-              <p>{blog.tekst.text}</p>
-              <p>{new Date(blog.time).toLocaleString()}</p>
-            </div>
+            <img src={gallery.img.url} alt={gallery.img.fileName} />
           </article>
         ))}
       </div>

@@ -1,18 +1,17 @@
 import { gql } from "graphql-request";
 
 export const getAllBlogs = gql`
-  query Blogs {
-    blogs {
+  query Galleries {
+    galleries {
       id
-      name
+      title
+      underRubrik
       time
+      laes
       img {
         id
-        fileName
         url
-      }
-      tekst {
-        text
+        width
       }
     }
   }

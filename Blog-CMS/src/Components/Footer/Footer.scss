@@ -1,0 +1,14 @@
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 100px;
+  position: relative;
+  bottom: 0;
+  background-color: azure;
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
