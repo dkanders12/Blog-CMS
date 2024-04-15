@@ -3,9 +3,8 @@
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
-  background-color: #555460;
+  background-color: white;
   width: 100%;
-  top: 0;
 
   #Logo {
     display: flex;
@@ -13,9 +12,9 @@
     gap: 10px;
     color: #e9e9e9;
     flex-wrap: wrap;
-    img {
-      width: 125px;
-      margin: 10px 0px 10px 40px;
+    padding: 20px;
+    h1 {
+      color: red;
     }
     p {
       margin-top: 20px;
@@ -30,43 +29,44 @@
   #Links {
     display: flex;
     width: 800px;
-    position: relative;
-    top: 30px;
+
     align-items: center;
-    justify-content: space-between;
+
     .fix {
-      border: 2px solid #e9e9e9;
+      border-right: 2px solid black;
       padding: 10px 0;
       text-decoration: none;
-      color: white;
+      color: black;
       display: flex;
       align-items: center;
       justify-content: center;
       width: 130px;
-      height: 60px; /* Set a fixed height for all links */
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-      border-bottom: none;
-      font-weight: bolder;
-      transition: padding 0.3s ease, background-color 0.3s ease,
-        margin 0.3s ease;
+      height: 50px; /* Set a fixed height for all links */
     }
-
-    .fix:hover {
-      padding-top: 30px;
-      padding-bottom: 40px;
-      margin-top: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #555460;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
+    li:first-child {
+      border-left: 2px solid black;
     }
   }
   #Face {
     font-size: 35px;
     color: #ffffff;
     margin-right: 40px;
+  }
+  .burgerMenu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000000;
+    @media screen and (max-width: 768px) {
+      z-index: 9999;
+      display: block;
+
+      margin-right: 10px; // Tilføjer lidt afstand til højre side
+    }
+  }
+  @media screen and (max-width: 768px) {
+    #Links {
+      display: none;
+    }
   }
 }

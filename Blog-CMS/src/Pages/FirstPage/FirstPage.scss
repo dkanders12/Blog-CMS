@@ -3,14 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+
   padding: 20px;
   margin-bottom: 70px;
-  background-color: rgb(
-    219,
-    212,
-    212
-  ); /* Move padding here to apply it to the .main element */
+  background-color: #f6f3f3;
+  .red {
+    color: red;
+  } /* Move padding here to apply it to the .main element */
 }
 
 #grid {
@@ -110,7 +109,7 @@
   .grid-item {
     display: flex;
     flex-direction: column;
-    background-color: azure;
+    background-color: white;
     h2 {
       margin-left: 20px;
       padding-top: 10px;
@@ -121,6 +120,47 @@
     p {
       margin-top: 10px;
       margin-left: 20px;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  #grid {
+    display: flex;
+    flex-direction: column;
+
+    .grid-item:nth-child(6) {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      display: flex;
+      flex-direction: column;
+    }
+    .grid-item:nth-child(7) {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      display: flex;
+      flex-direction: column;
+    }
+    .grid-item {
+      display: flex;
+      flex-direction: column;
+      background-color: azure;
+      h2 {
+        margin-left: 20px;
+        padding-top: 10px;
+      }
+      a {
+        margin-left: 20px;
+      }
+      p {
+        margin-top: 10px;
+        margin-left: 20px;
+      }
     }
   }
 }

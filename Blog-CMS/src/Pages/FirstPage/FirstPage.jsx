@@ -23,8 +23,8 @@ const FirstPage = () => {
           <article id="Container" key={gallery.id} className="grid-item">
             <div>
               <h2>{gallery.title}</h2>
-              <p>{gallery.underRubrik}</p>
-              <p>{new Date(gallery.time).toLocaleString()}</p>
+              <p className="display">{gallery.underRubrik}</p>
+              <p className="red">{new Date(gallery.time).toLocaleString()}</p>
               <NavLink to={`/gallery/${gallery.id}`}>{gallery.laes}</NavLink>
             </div>
             <img src={gallery.img.url} alt={gallery.img.fileName} />
