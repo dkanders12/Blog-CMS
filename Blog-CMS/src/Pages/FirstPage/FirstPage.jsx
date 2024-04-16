@@ -25,7 +25,7 @@ const FirstPage = () => {
               <h2>{gallery.title}</h2>
               <p className="display">{gallery.underRubrik}</p>
               <p className="red">{new Date(gallery.time).toLocaleString()}</p>
-              <NavLink to={`/gallery/${gallery.id}`}>{gallery.laes}</NavLink>
+              <NavLink to={`/gallery/${gallery.id}`}>Læs mere</NavLink>
             </div>
             <img src={gallery.img.url} alt={gallery.img.fileName} />
           </article>
