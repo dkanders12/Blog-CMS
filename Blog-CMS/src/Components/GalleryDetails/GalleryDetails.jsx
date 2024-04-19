@@ -17,8 +17,7 @@ const GalleryDetail = () => {
   }
 
   const gallery = data.galleries.filter((gallery) => gallery.id === id);
-  console.log(id);
-  console.log(gallery);
+
   if (!gallery) {
     return <div>Gallery not found</div>;
   }
@@ -26,7 +25,7 @@ const GalleryDetail = () => {
   return (
     <div>
       <h1>{gallery[0].title}</h1>
-      <p>{gallery[0].content}</p>
+      <p>{gallery[0].underRubrik}</p>
     </div>
   );
 };
